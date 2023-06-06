@@ -47,10 +47,10 @@ function App() {
 
   return (
     <main>
-      <div className="container mx-auto">
+      <div className="container mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div className="left_col">
-            <div className="container mx-auto px-20 py-12">
+            <div className="container mx-auto pt-10 px-4 md:px-20 md:py-12">
               <div className="flex gap-3">
                 <div>
                   <a href="/" className="flex items-center gap-2">
@@ -126,7 +126,7 @@ function App() {
                 </li>
               </ul>
 
-              <div className="absolute bottom-0">
+              {/* <div className="absolute bottom-0">
                 <p className="text-sm text-gray-400">
                   Powered by <b>stripe</b> &nbsp; | &nbsp;&nbsp;
                   <a
@@ -143,12 +143,12 @@ function App() {
                     Privacy
                   </a>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 
           <div className="right_col">
-            <div className="container mx-auto px-20 py-12">
+            <div className="container mx-auto pb-16 px-4 md:px-20 md:py-12">
               <div>
                 <button className="bg-black text-white w-full text-lg font-semibold rounded-md">
                   <img
@@ -292,12 +292,31 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-2 left-14 md:bottom-10 md:left-20">
+          <p className="text-sm text-gray-400">
+            Powered by <b>stripe</b> &nbsp; | &nbsp;&nbsp;
+            <a
+              href="/"
+              className="border-dotted border-b-2 border-gray-300 hover:text-gray-500"
+            >
+              Terms
+            </a>
+            &nbsp; &nbsp;&nbsp;
+            <a
+              href="/"
+              className="border-dotted border-b-2 border-gray-300 hover:text-gray-500"
+            >
+              Privacy
+            </a>
+          </p>
+        </div>
       </div>
 
       {isModalOpen ? (
         <div className="bg-black/[0.3] fixed top-0 left-0 z-10 w-full h-full">
           <div className="grid place-items-center h-full">
-            <div className="bg-white max-w-sm w-full rounded-lg">
+            <div className="bg-white max-w-xs md:max-w-sm w-full rounded-lg">
               <div className="p-5">
                 <div className="flex justify-between items-center">
                   <div className="flex gap-4">
